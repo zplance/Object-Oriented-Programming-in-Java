@@ -224,10 +224,10 @@ public class EarthquakeCityMap extends PApplet {
 		//        String country = (String)m.getProperty("country");
 		int QuakeCounter;
 		int numOceanQuakes = quakeMarkers.size();
-		
+		String country; 
 		for(Marker cm: countryMarkers) {
 			QuakeCounter = 0;
-			String country = (String)cm.getProperty("country");
+			country = (String)cm.getProperty("name");
 			for (Marker quake: quakeMarkers) {
 				EarthquakeMarker em = (EarthquakeMarker)quake;
 				if (em.isOnLand()) {
@@ -236,6 +236,7 @@ public class EarthquakeCityMap extends PApplet {
 					}
 				}
 			}
+			
 			numOceanQuakes -= QuakeCounter;
 			if (QuakeCounter > 0) {
 				System.out.println(cm.getStringProperty("name") + " - " + QuakeCounter);
