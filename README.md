@@ -7,4 +7,4 @@ This is a self-learning playground, with coursera courses offered by Duke and UC
 
 The build, lib, data folders are default and created by courses offer.
 
-I did programing part in src folder named by weeks.
+I did programing part in src folders named by weeks.
